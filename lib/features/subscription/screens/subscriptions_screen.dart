@@ -3,6 +3,7 @@ import 'package:cleanarch/core/theming/text_styles.dart';
 import 'package:cleanarch/core/widgets/background_container.dart';
 import 'package:cleanarch/features/subscription/widgets/plan_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SubscriptionsScreen extends StatelessWidget {
   const SubscriptionsScreen({Key? key}) : super(key: key);
@@ -22,10 +23,10 @@ class SubscriptionsScreen extends StatelessWidget {
               ),
               actions: [
                 IconButton(
-                  padding: const EdgeInsets.only(right: 40),
+                  padding: EdgeInsets.only(right: 40.w),
                   onPressed: () {},
                   icon: Ink(
-                    padding: const EdgeInsets.all(2),
+                    padding: EdgeInsets.all(2.r),
                     decoration: const ShapeDecoration(
                       color: Colors.white,
                       shape: CircleBorder(),
@@ -39,8 +40,8 @@ class SubscriptionsScreen extends StatelessWidget {
             body: Stack(
               children: [
                 Positioned(
-                  left: -140,
-                  top: -100,
+                  left: -140.w,
+                  top: -100.h,
                   child: Image.asset(
                     'assets/images/Star_2.png',
                     fit: BoxFit.fill,
@@ -48,12 +49,12 @@ class SubscriptionsScreen extends StatelessWidget {
                 ),
 
                 Positioned(
-                  top: 100,
-                  left: 100,
-                  right: 100,
+                  top: 100.h,
+                  left: 100.w,
+                  right: 100.w,
                   child: SizedBox(
-                    height: 250,
-                    width: 250,
+                    height: 250.h,
+                    width: 250.w,
                     child: Image.asset(
                       'assets/images/payment_logo.png',
                       fit: BoxFit.cover,
@@ -62,8 +63,8 @@ class SubscriptionsScreen extends StatelessWidget {
                 ),
 
                 Positioned(
-                  right: -145,
-                  top: 200,
+                  right: -145.w,
+                  top: 200.h,
                   child: Image.asset(
                     'assets/images/Star_1.png',
                     fit: BoxFit.fill,
@@ -71,9 +72,9 @@ class SubscriptionsScreen extends StatelessWidget {
                 ),
 
                 Positioned(
-                  top: 350,
-                  right: 50,
-                  left: 50,
+                  top: 350.h,
+                  right: 50.w,
+                  left: 50.w,
                   child: Text(
                     'Seamless Anime \nExperiencem Ad-Free.',
                     textAlign: TextAlign.center,
@@ -82,10 +83,10 @@ class SubscriptionsScreen extends StatelessWidget {
                 ),
 
                 Positioned(
-                  top: 420,
-                  right: 50,
+                  top: 420.h,
+                  right: 50.w,
                   child: SizedBox(
-                    width: 300,
+                    width: 300.w,
                     child: Text(
                       'Enjoy unlimited anime streaming without interruptions.',
                       textAlign: TextAlign.center,
@@ -95,9 +96,9 @@ class SubscriptionsScreen extends StatelessWidget {
                 ),
 
                 Positioned(
-                  bottom: 250,
-                  right: 30,
-                  left: 30,
+                  bottom: 250.h,
+                  right: 30.w,
+                  left: 30.w,
                   child: PlanCard(
                     planTitle: 'Monthly',
                     priceText: '\$5 USD',
@@ -112,9 +113,9 @@ class SubscriptionsScreen extends StatelessWidget {
                 ),
 
                 Positioned(
-                  bottom: 135,
-                  right: 30,
-                  left: 30,
+                  bottom: 135.h,
+                  right: 30.w,
+                  left: 30.w,
                   child: PlanCard(
                     planTitle: 'Annually',
                     planTitleStyle: TextStyles.font16DarkPurpleBold,
@@ -131,9 +132,9 @@ class SubscriptionsScreen extends StatelessWidget {
                 ),
 
                 Positioned(
-                  bottom: 60,
-                  right: 30,
-                  left: 30,
+                  bottom: 60.h,
+                  right: 30.w,
+                  left: 30.w,
                   child: ElevatedButton(
                     style: ButtonStyle(
                       elevation: WidgetStateProperty.all<double>(0),

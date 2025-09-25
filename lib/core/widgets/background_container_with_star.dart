@@ -24,15 +24,19 @@ class BackgroundContainerWithStar extends StatelessWidget {
           tileMode: TileMode.clamp,
         ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Stack(
         children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 30.0),
-          child: Image.asset("assets/images/Star_3.png",),
-        )
-      ],),
+          // Star image in top-right (background layer)
+          Positioned(
+            top: 30.0,
+            right: 0,
+            child: Image.asset("assets/images/Star_3.png"),
+          ),
+          
+          // Your main content (foreground layer)
+          child,
+        ],
+      ),
     );
   }
 }

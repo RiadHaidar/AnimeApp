@@ -10,4 +10,7 @@ class AppColors {
   static const Color lighterPurple =Color(0xffA49AD8);
   static const Color purple =Color(0xff5436F8);
   static const Color lightGrey= Color(0xffAEADB5);
+  static const Color grey= Color(0xffD6CCCC);
+  static const Color darkGrey = Color(0xffA9A9A9);
+  static const Color darkestGrey = Color(0xffACACAC);
 }

@@ -1,5 +1,6 @@
 import 'package:cleanarch/core/theming/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// A reusable widget for displaying subscription plan options
 ///
@@ -71,21 +72,21 @@ class PlanCard extends StatelessWidget {
   Widget build(BuildContext context) {
  
     return Container(
-      padding: const EdgeInsets.symmetric(
-        vertical: 12,
-        horizontal: 5
+      padding: EdgeInsets.symmetric(
+        vertical: 12.h,
+        horizontal: 5.w
       ),
-      width: 342,
-      height: 102,
+      width: 342.w,
+      height: 102.h,
       decoration: BoxDecoration(
         color: backgroundColor,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
 
         boxShadow: [
           BoxShadow(
-            offset: Offset(-1, -1), // Shadow position
-            blurRadius: 4, // Blur radius
-            spreadRadius: -2, // Spread radius
+            offset: Offset(-1.w, -1.h), // Shadow position
+            blurRadius: 4.r, // Blur radius
+            spreadRadius: -2.r, // Spread radius
             color: const Color(0x3F000000).withValues(alpha:0.25), // Shadow color
           ),
 
@@ -127,22 +128,22 @@ class PlanCard extends StatelessWidget {
           IconButton(
             onPressed: onPressed,
             icon: Container(
-              padding: const EdgeInsets.all(3),
+              padding: EdgeInsets.all(3.r),
               decoration: ShapeDecoration(
                 color: iconBackgroundColor ?? const Color(0xff5436F8),
-                shape: const CircleBorder(
-                  side: BorderSide(width: 2, color: Color(0xff18153F)
+                shape: CircleBorder(
+                  side: BorderSide(width: 2.w, color: const Color(0xff18153F)
                 ),)
               ),
               child: isSelected 
                 ? Icon(
                     Icons.check,
-                    size: 18,
+                    size: 18.sp,
                     color: iconColor ?? const Color(0xff18153F),
                   )
                 : SizedBox(
-                    width: 18,
-                    height: 18,
+                    width: 18.w,
+                    height: 18.h,
                   ),
             ),
           ),
