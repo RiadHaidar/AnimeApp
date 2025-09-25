@@ -1,3 +1,4 @@
+import 'package:cleanarch/core/theming/text_styles.dart';
 import 'package:flutter/material.dart';
 
 /// A reusable widget for displaying subscription plan options
@@ -68,31 +69,7 @@ class PlanCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Default text styles if not provided
-    final defaultPlanTitleStyle = TextStyle(
-      color: Colors.white,
-      fontWeight: FontWeight.w700,
-      fontSize: 16,
-    );
-    
-    final defaultPriceTextStyle = TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w700,
-      color: Colors.white,
-    );
-    
-    final defaultPeriodTextStyle = TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w700,
-      color: const Color(0xffA49AD8),
-    );
-    
-    final defaultFeatureTextStyle = TextStyle(
-      color: const Color(0xffA49AD8),
-      fontWeight: FontWeight.w700,
-      fontSize: 14,
-    );
-
+ 
     return Container(
       padding: const EdgeInsets.symmetric(
         vertical: 12,
@@ -125,25 +102,25 @@ class PlanCard extends StatelessWidget {
             children: [
               Text(
                 planTitle,
-                style: planTitleStyle ?? defaultPlanTitleStyle,
+                style: planTitleStyle ?? TextStyles.font16WhieteBold,
               ),
               RichText(
                 text: TextSpan(
                   children: [
                     TextSpan(
                       text: priceText,
-                      style: priceTextStyle ?? defaultPriceTextStyle,
+                      style: priceTextStyle ?? TextStyles.font14WhieteBoldTextStyle,
                     ),
                     TextSpan(
                       text: periodText,
-                      style: periodTextStyle ?? defaultPeriodTextStyle,
+                      style: periodTextStyle ?? TextStyles.font14LightPurpleBold,
                     ),
                   ],
                 ),
               ),
               Text(
                 featureText,
-                style: featureTextStyle ?? defaultFeatureTextStyle,
+                style: featureTextStyle ?? TextStyles.font14LightPurpleBold,
               ),
             ],
           ),

@@ -1,3 +1,5 @@
+import 'package:cleanarch/core/theming/app_colors.dart';
+import 'package:cleanarch/core/theming/text_styles.dart';
 import 'package:cleanarch/core/widgets/background_container.dart';
 import 'package:cleanarch/features/subscription/widgets/plan_card.dart';
 import 'package:flutter/material.dart';
@@ -14,27 +16,22 @@ class SubscriptionsScreen extends StatelessWidget {
             extendBodyBehindAppBar: true,
             appBar: AppBar(
               backgroundColor: Colors.transparent,
-              title: const Text(
+              title: Text(
                 'Upgrade Plan',
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                  letterSpacing: 1.5,
-                ),
+                style: TextStyles.font22DarkPurpleBold,
               ),
               actions: [
                 IconButton(
                   padding: const EdgeInsets.only(right: 40),
-                  onPressed: () {}, 
+                  onPressed: () {},
                   icon: Ink(
                     padding: const EdgeInsets.all(2),
                     decoration: const ShapeDecoration(
-                      color: Colors.white, 
-                      shape: CircleBorder()
+                      color: Colors.white,
+                      shape: CircleBorder(),
                     ),
-                    child: const Icon(Icons.close)
-                  )
+                    child: const Icon(Icons.close),
+                  ),
                 ),
               ],
             ),
@@ -77,30 +74,22 @@ class SubscriptionsScreen extends StatelessWidget {
                   top: 350,
                   right: 50,
                   left: 50,
-                  child: const Text(
+                  child: Text(
                     'Seamless Anime \nExperiencem Ad-Free.',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xff18153F),
-                    ),
+                    style: TextStyles.font24DarkPurpleBold,
                   ),
                 ),
-                
+
                 Positioned(
                   top: 420,
                   right: 50,
                   child: SizedBox(
                     width: 300,
-                    child: const Text(
+                    child: Text(
                       'Enjoy unlimited anime streaming without interruptions.',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xffAEADB5),
-                      ),
+                      style: TextStyles.font14LightGreyRegular,
                     ),
                   ),
                 ),
@@ -111,14 +100,14 @@ class SubscriptionsScreen extends StatelessWidget {
                   left: 30,
                   child: PlanCard(
                     planTitle: 'Monthly',
-                    priceText: '\$5 USD', 
+                    priceText: '\$5 USD',
                     periodText: '/Month',
-                    featureText: 'Include Family Sharing', 
-                    backgroundColor: const Color(0xff18153F), 
-                    iconColor: const Color(0xff18153F),
-                    iconBackgroundColor: const Color(0xff5436F8),
+                    featureText: 'Include Family Sharing',
+                    backgroundColor: AppColors.darkerPurple,
+                    iconColor: AppColors.darkerPurple,
+                    iconBackgroundColor: AppColors.lightPurple,
                     isSelected: true,
-                    imagePath: 'assets/images/files_folders.png', 
+                    imagePath: 'assets/images/files_folders.png',
                   ),
                 ),
 
@@ -128,47 +117,32 @@ class SubscriptionsScreen extends StatelessWidget {
                   left: 30,
                   child: PlanCard(
                     planTitle: 'Annually',
-                    planTitleStyle: const TextStyle(
-                      color: Color(0xff18153F),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
-                    ),
-                    priceTextStyle: const TextStyle(
-                      color: Color(0xff18153F),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
-                    ),
-                    priceText: '\$50 USD', 
+                    planTitleStyle: TextStyles.font16DarkPurpleBold,
+                    priceTextStyle: TextStyles.font16DarkPurpleBold,
+                    priceText: '\$50 USD',
                     periodText: '/Year',
-                    featureText: 'Include Family Sharing', 
-                    backgroundColor: Colors.white, 
-                    iconColor: const Color(0xff18153F),
+                    featureText: 'Include Family Sharing',
+                    backgroundColor: Colors.white,
+                    iconColor: AppColors.darkPurple,
                     iconBackgroundColor: Colors.white,
                     isSelected: false,
-                    imagePath: 'assets/images/files_folders.png', 
+                    imagePath: 'assets/images/files_folders.png',
                   ),
                 ),
-                
+
                 Positioned(
                   bottom: 60,
                   right: 30,
                   left: 30,
                   child: ElevatedButton(
                     style: ButtonStyle(
-                      elevation: MaterialStateProperty.all<double>(0),
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                        const Color(0xff5436F8)
+                      elevation: WidgetStateProperty.all<double>(0),
+                      backgroundColor: WidgetStateProperty.all<Color>(
+                        AppColors.purple,
                       ),
                     ),
                     onPressed: () {},
-                    child: const Text(
-                      'Continue',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    )
+                    child: Text('Continue', style: TextStyles.font16WhieteBold),
                   ),
                 ),
               ],
