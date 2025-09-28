@@ -19,4 +19,6 @@ abstract class ShowsRepository {
   Future<Either<Failure, List<ShowResponseEntity>>> getTrending();
 
   Future<Either<Failure, List<CharacterEntity>>> getCharacters(int showId);
+
+
 }

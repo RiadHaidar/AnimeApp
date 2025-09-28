@@ -33,6 +33,26 @@ class GetShowsUseCase {
        shows.where((show) => show.genre == genreName).toList());
    }
 
+   Future<Either<Failure, ShowResponseEntity>> getShowDetails(int id) async{
+     final showsResult = await _showsRepository.getShowDetails(id);
 
+
+     return showsResult;
+   }
+   
+   /// Returns a list of unique categories (genres) from all shows
+   Future<Either<Failure, List<String>>> getCategories() async {
+     final showsResult = await _showsRepository.getShows();
+     
+     return showsResult.map((shows) {
+       // Extract unique genres using a Set
+       final categoriesSet = shows
+           .where((show) => show.genre != null && show.genre!.isNotEmpty)
+           .map((show) => show.genre!)
+           .toSet();
+       
+       return categoriesSet.toList();
+     });
+   }
 
 }

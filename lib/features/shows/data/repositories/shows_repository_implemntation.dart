@@ -7,15 +7,15 @@ import 'package:cleanarch/features/shows/domain/repo/shows_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
 class ShowsRepositoryImplemntation extends ShowsRepository {
-  final MockShowDataSource _mockShowDataSource;
+  final MockShowDataSource mockShowDataSource;
 
-  ShowsRepositoryImplemntation(this._mockShowDataSource);
+  ShowsRepositoryImplemntation(this.mockShowDataSource);
   @override
   Future<Either<Failure, List<CharacterEntity>>> getCharacters(
     int showId,
   ) async {
     try {
-      final shows = await _mockShowDataSource.fetchShows(showId: showId);
+      final shows = await mockShowDataSource.fetchShows(showId: showId);
 
       // Extract characters from all shows and convert to CharacterEntity
       final List<CharacterEntity> characters = [];
@@ -43,7 +43,7 @@ class ShowsRepositoryImplemntation extends ShowsRepository {
   @override
   Future<Either<Failure, List<ShowResponseEntity>>> getShows() async {
     try {
-      final List<ShowResponseModel> shows = await _mockShowDataSource
+      final List<ShowResponseModel> shows = await mockShowDataSource
           .fetchShows();
       final List<ShowResponseEntity> showEntity = [];
       for (var show in shows) {
