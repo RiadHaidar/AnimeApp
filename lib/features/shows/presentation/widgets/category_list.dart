@@ -1,4 +1,5 @@
 import 'package:cleanarch/core/theming/text_styles.dart';
+import 'package:cleanarch/features/shows/presentation/screen/show_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
