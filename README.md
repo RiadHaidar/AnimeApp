@@ -31,7 +31,7 @@ As shown in the photo below:
 
 
 
-<img width="150" height="250" alt="https___dev-to-uploads s3 amazonaws com_uploads_articles_fqeiepngw5aeco73r3wx (1)" src="https://github.com/user-attachments/assets/9841601b-d917-4337-948f-ad4301941518" />
+<img width="350" height="500" alt="https___dev-to-uploads s3 amazonaws com_uploads_articles_fqeiepngw5aeco73r3wx (1)" src="https://github.com/user-attachments/assets/9841601b-d917-4337-948f-ad4301941518" />
 
 
 
